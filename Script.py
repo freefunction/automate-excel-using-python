@@ -42,10 +42,15 @@ for path in list(files_dir.rglob("*.xls*")):
 
 #  using Pandas and add new column which contains today date
 
-#  save each file in a new directory
+#  save each file in a new directory and keeping the same directory structure
+
+# as the original one
+
 for path in list(files_dir.rglob("*.xls*")):
     df = pd.read_excel(path)
     df["new_column"] = pd.to_datetime("today")
     output_additional_column = Path.cwd() / "output_additional_column"
     output_additional_column.mkdir(exist_ok=True)
-    df.to_excel(output_additional_column / path.name, index=False)
+    (output_additional_column / path.parent.name).mkdir(exist_ok=True)
+    df.to_excel(output_additional_column / path.parent.name / path.name,
+                index=False)
