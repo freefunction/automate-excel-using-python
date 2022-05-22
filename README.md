@@ -6,7 +6,7 @@ Source of these files is coming from this <a href="https://github.com/Sven-Bo/it
 
 Here are the main libraries used in this tutorial :
 
-  * pathlib to locate the path the xls files
+  * pathlib to locate the path of the xls files
   * Pandas to read excel and merge a list of files into one file
   * openpyxl to access and modify excel file
    
