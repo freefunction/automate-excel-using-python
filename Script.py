@@ -7,7 +7,7 @@ from openpyxl import load_workbook
 
 files_dir = Path.cwd() / "Excel_Files"
 
-#  loop through folder and subfolders , read each file using pandas and append
+#  loop through folders and subfolders , read each file using pandas and append
 
 #  each dataframe in a list variable
 list_of_df = []
