@@ -42,7 +42,7 @@ for path in list(files_dir.rglob("*.xls*")):
 
 #  using Pandas and add new column which contains today date
 
-#  save each file in a new directory and keeping the same subfolders name 
+#  save each file in a new directory and keeping the same subfolders name
 
 # as the original one
 
